@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آزمون تستی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>آزمون تستی</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <p> 1 : عنوان سوال رو باید اینجا نوشت؟</p>
+                <div class="continer-item"><label><input type="radio" name="q1" value="wrong">گزینه غلط</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q1" value="correct">گزینه درست</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q1" value="wrong">گزینه غلط</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q1" value="wrong">گزینه غلط</label><br>
+                </div>
+            </div>
+            <div class="question">
+                <p> 2 : عنوان سوال رو باید اینجا نوشت؟</p>
+                <div class="continer-item"><label><input type="radio" name="q2" value="wrong">گزینه غلط</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q2" value="correct">گزینه درست</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q2" value="wrong">گزینه غلط</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q2" value="wrong">گزینه غلط</label><br>
+                </div>
+            </div>
+            <div class="question">
+                <p> 3 : عنوان سوال رو باید اینجا نوشت؟</p>
+                <div class="continer-item"><label><input type="radio" name="q3" value="wrong">گزینه غلط</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q3" value="correct">گزینه درست</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q3" value="wrong">گزینه غلط</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q3" value="wrong">گزینه غلط</label><br>
+                </div>
+            </div>
+            <div class="question">
+                <p> 4 : عنوان سوال رو باید اینجا نوشت؟</p>
+                <div class="continer-item"><label><input type="radio" name="q4" value="wrong">گزینه غلط</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q4" value="correct">گزینه درست</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q4" value="wrong">گزینه غلط</label><br>
+                </div>
+                <div class="continer-item"><label><input type="radio" name="q4" value="wrong">گزینه غلط</label><br>
+                </div>
+            </div>
+        </form>
+        <div class="container-btn">
+            <button type="button" id="submit-button">ارسال پاسخ‌ها</button>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>نتایج:</h2>
+            <p>جواب‌های درست: <span id="correct-answers">0</span></p>
+            <p>جواب‌های غلط: <span id="wrong-answers">0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
