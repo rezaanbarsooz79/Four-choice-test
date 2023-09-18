@@ -1,0 +1,38 @@
+\
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLogin.css">
+    <title>ورود و ثبت نام</title>
+</head>
+
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="login">
+            <form class="form">
+                <label for="chk" aria-hidden="true">ورود</label>
+                <input class="input" type="text" name="text" placeholder="نام کاربری" required="">
+                <input class="input" type="password" name="pswd" placeholder="رمز عبور" required="">
+                <button>ورود</button>
+            </form>
+        </div>
+
+        <div class="register">
+            <form class="form">
+                <label for="chk" aria-hidden="true">ثبت نام</label>
+                <input class="input" type="text" name="txt" placeholder="نام کاربری" required="">
+                <input class="input" type="email" name="email" placeholder="ایمیل" required="">
+                <input class="input" type="password" name="pswd" placeholder="رمز عبور" required="">
+                <button class="register">ثبت نام</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
