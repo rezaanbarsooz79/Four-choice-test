@@ -1,13 +1,15 @@
 @font-face {
-    Font-family:"Yekan Bakh";
+    Font-family: "Yekan Bakh";
     Src: url("yekanbakhm/yekan\ bakh\ en\ 05\ medium.eot") format("eot");
     Font-weight: bold;
 }
+
 @font-face {
-    Font-family:"Yekan Bakh Fat";
+    Font-family: "Yekan Bakh Fat";
     Src: url("yekanbakhm/yekan\ bakh\ en\ 05\ medium.eot") format("eot");
     Font-weight: bold;
 }
+
 @font-face {
     font-family: 'Yekan Bakh Fat';
     src: url('yekanbakhf/yekanbakhenfat.woff2') format('woff2'),
@@ -15,13 +17,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Yekan Bakh ';
+    font-family: 'Yekan Bakh';
     src: url('yekanbakhm/yekanbakhenmedium.woff2') format('woff2'),
         url('yekanbakhm/yekanbakhenmedium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 body {
     background-color: #f0f0f0;
     margin: 0;
