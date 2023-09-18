@@ -79,5 +79,16 @@ button:hover {
 
 input[type="radio"] {
     margin-bottom: 20px;
-
+}
+.timer {
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px;
+    font-family: Yekan Bakh ;
+    position: sticky;
+    top: 0px;
+    border-radius: 10px;
 }

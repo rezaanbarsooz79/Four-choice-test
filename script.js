@@ -111,3 +111,54 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+// انتخاب دکمه
+const submitButton = document.getElementById('submit-button');
+
+// تابعی برای غیرفعال کردن دکمه و تغییر رنگ به خاکستری
+function disableButton() {
+    submitButton.disabled = true;
+    submitButton.style.backgroundColor = 'gray'; // تغییر رنگ به خاکستری
+}
+
+// تنظیم تایمر برای فراخوانی تابع غیرفعال کردن دکمه بعد از یک دقیقه
+setTimeout(disableButton, 13000); // 60000 میلی‌ثانیه معادل یک دقیقه است
+
+// تایمر
+let hours = 0; // تعداد ساعت‌ها
+let minutes = 1; // تعداد دقیقه‌ها
+let seconds = 30; // تعداد ثانیه‌ها
+
+const hoursSpan = document.getElementById('hours');
+const minutesSpan = document.getElementById('minutes');
+const secondsSpan = document.getElementById('seconds');
+
+function updateTimer() {
+    if (seconds > 0) {
+        seconds--;
+    } else if (minutes > 0) {
+        minutes--;
+        seconds = 59;
+    } else if (hours > 0) {
+        hours--;
+        minutes = 59;
+        seconds = 59;
+    } else {
+        // زمان به پایان رسیده است
+        clearInterval(timerInterval);
+        alert('تایمر به پایان رسید.');
+    }
+
+    const formattedHours = String(hours).padStart(2, '0');
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(seconds).padStart(2, '0');
+
+    hoursSpan.textContent = formattedHours;
+    minutesSpan.textContent = formattedMinutes;
+    secondsSpan.textContent = formattedSeconds;
+}
+
+// تابع setInterval برای شروع تایمر
+const timerInterval = setInterval(updateTimer, 1500);
+
+
