@@ -1,16 +1,4 @@
 @font-face {
-    Font-family: "Yekan Bakh";
-    Src: url("yekanbakhm/yekan\ bakh\ en\ 05\ medium.eot") format("eot");
-    Font-weight: bold;
-}
-
-@font-face {
-    Font-family: "Yekan Bakh Fat";
-    Src: url("yekanbakhm/yekan\ bakh\ en\ 05\ medium.eot") format("eot");
-    Font-weight: bold;
-}
-
-@font-face {
     font-family: 'Yekan Bakh Fat';
     src: url('yekanbakhf/yekanbakhenfat.woff2') format('woff2'),
         url('yekanbakhf/yekanbakhenfat.woff') format('woff');
