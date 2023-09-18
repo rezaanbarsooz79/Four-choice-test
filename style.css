@@ -91,4 +91,5 @@ input[type="radio"] {
     position: sticky;
     top: 0px;
     border-radius: 10px;
+    width: 100%;
 }
