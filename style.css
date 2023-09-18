@@ -19,6 +19,13 @@
 }
 
 @font-face {
+    font-family: 'Yekan Bakh Fat';
+    src: url('yekanbakhf/yekanbakhenfat.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Yekan Bakh';
     src: url('yekanbakhm/yekanbakhenmedium.woff2') format('woff2'),
         url('yekanbakhm/yekanbakhenmedium.woff') format('woff');
@@ -32,9 +39,8 @@ body {
     padding: 0;
 }
 
-h1 {
+.title {
     text-align: center;
-    font-family: Yekan Bakh Fat;
     font-family: Yekan Bakh Fat;
     font-size: 3rem;
 }
