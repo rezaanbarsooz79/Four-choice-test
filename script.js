@@ -122,12 +122,13 @@ function disableButton() {
 }
 
 // تنظیم تایمر برای فراخوانی تابع غیرفعال کردن دکمه بعد از یک دقیقه
-setTimeout(disableButton, 13000); // 60000 میلی‌ثانیه معادل یک دقیقه است
 
 // تایمر
 let hours = 0; // تعداد ساعت‌ها
-let minutes = 1; // تعداد دقیقه‌ها
-let seconds = 30; // تعداد ثانیه‌ها
+let minutes = 0; // تعداد دقیقه‌ها
+let seconds = 10; // تعداد ثانیه‌ها
+timeOut = (seconds * 1000) + (minutes * 60 * 1000) + (hours * 60 * 60 * 1000)
+setTimeout(disableButton, timeOut); // 60000 میلی‌ثانیه معادل یک دقیقه است
 
 const hoursSpan = document.getElementById('hours');
 const minutesSpan = document.getElementById('minutes');
@@ -159,6 +160,6 @@ function updateTimer() {
 }
 
 // تابع setInterval برای شروع تایمر
-const timerInterval = setInterval(updateTimer, 1500);
+const timerInterval = setInterval(updateTimer, 1000);
 
 
