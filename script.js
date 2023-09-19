@@ -127,7 +127,7 @@ function disableButton() {
 let hours = 0; // تعداد ساعت‌ها
 let minutes = 0; // تعداد دقیقه‌ها
 let seconds = 10; // تعداد ثانیه‌ها
-timeOut = (seconds * 1000) + (minutes * 60 * 1000) + (hours * 60 * 60 * 1000)
+let timeOut = (seconds * 1000) + (minutes * 60 * 1000) + (hours * 60 * 60 * 1000)
 setTimeout(disableButton, timeOut); // 60000 میلی‌ثانیه معادل یک دقیقه است
 
 const hoursSpan = document.getElementById('hours');
@@ -147,7 +147,7 @@ function updateTimer() {
     } else {
         // زمان به پایان رسیده است
         clearInterval(timerInterval);
-        alert('تایمر به پایان رسید.');
+        alert('آزمون به پایان رسید موفق باشید');
     }
 
     const formattedHours = String(hours).padStart(2, '0');
@@ -163,3 +163,70 @@ function updateTimer() {
 const timerInterval = setInterval(updateTimer, 1000);
 
 
+//فعال شدن دکمه قبل از تموم شدن ازمون
+let timeOut1 = timeOut - 500
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        var button = document.getElementById("submit-button");
+        button.click();
+    }, timeOut1);
+});
+
+
+// تابع اسکرول به انتهای صفحه
+function scrollToBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
+// اضافه کردن event listener برای پایان تایمر
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        var button = document.getElementById("submit-button");
+        button.click();
+        scrollToBottom(); // اسکرول به انتهای صفحه
+    }, timeOut);
+    // همچنین، اگر تایمر به پایان برسد:
+    // clearInterval(timerInterval); // توقف تایمر
+    // scrollToBottom(); // اسکرول به انتهای صفحه
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const submitButton = document.getElementById("submit-button");
+
+    submitButton.addEventListener("click", function () {
+        // اسکرول به انتهای صفحه
+        window.scrollTo(0, document.body.scrollHeight);
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const submitButton = document.getElementById("submit-button");
+
+    submitButton.addEventListener("click", function () {
+        // تغییر رنگ دکمه به خاکستری
+        submitButton.style.backgroundColor = 'gray';
+        submitButton.disabled = true; // غیرفعال کردن دکمه
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const submitButton = document.getElementById("submit-button");
+
+    submitButton.addEventListener("click", function () {
+        // تغییر مقدار تایمر به صفر
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+
+        // به روز رسانی عناصر HTML برای نمایش تایمر
+        const formattedHours = String(hours).padStart(2, '0');
+        const formattedMinutes = String(minutes).padStart(2, '0');
+        const formattedSeconds = String(seconds).padStart(2, '0');
+
+        hoursSpan.textContent = formattedHours;
+        minutesSpan.textContent = formattedMinutes;
+        secondsSpan.textContent = formattedSeconds;
+
+        // غیرفعال کردن دکمه
+        submitButton.style.backgroundColor = 'gray';
+        submitButton.disabled = true;
+    });
+});

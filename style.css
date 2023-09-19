@@ -80,6 +80,7 @@ button:hover {
 input[type="radio"] {
     margin-bottom: 20px;
 }
+
 .timer {
     font-size: 2em;
     margin: 0 auto;
@@ -87,9 +88,23 @@ input[type="radio"] {
     background-color: #007bff;
     color: #fff;
     padding: 5px;
-    font-family: Yekan Bakh ;
+    font-family: Yekan Bakh;
     position: sticky;
     top: 0px;
-    border-radius: 10px;
-    width: 100%;
+    border-radius: 5px;
+}
+
+#correct-answers,
+#correct-answersp {
+    color: green;
+    font-size: 1.3rem;
+}
+
+#wrong-answers,
+#wrong-answersp {
+    color: red;
+    font-size: 1.3rem;
+}
+#h2-result{
+    font-size: 2rem;
 }
