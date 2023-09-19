@@ -55,7 +55,7 @@ body {
 button {
     padding: 12px 20px;
     font-size: 1.4rem;
-    background-color: #007bff;
+    background-color: #673ab7;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -65,7 +65,8 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+
+    background-color: #9f6df8;
 }
 
 #result {
@@ -85,7 +86,7 @@ input[type="radio"] {
     font-size: 2em;
     margin: 0 auto;
     text-align: center;
-    background-color: #007bff;
+    background-color: #673ab7;
     color: #fff;
     padding: 5px;
     font-family: Yekan Bakh;
@@ -105,6 +106,7 @@ input[type="radio"] {
     color: red;
     font-size: 1.3rem;
 }
-#h2-result{
+
+#h2-result {
     font-size: 2rem;
 }
