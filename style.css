@@ -40,11 +40,10 @@ form {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     background-color: #fff;
-    /* padding: 20px; */
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     direction: rtl;
     font-family: Yekan Bakh;
@@ -128,4 +127,52 @@ input[type="radio"] {
     align-items: baseline;
     justify-content: flex-start;
     margin-right: 30px;
+}
+
+@media only screen and (max-width:700px) {
+    .container {
+        max-width: 500px;
+    }
+
+    #h2-result {
+        font-size: 1.4rem;
+        margin-left: 15px;
+    }
+
+    #wrong-answers,
+    #wrong-answersp {
+        font-size: 1rem;
+    }
+
+    #correct-answers,
+    #correct-answersp {
+        font-size: 1rem;
+    }
+
+    .continer-resilt {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .container {
+        max-width: 400px;
+    }
+
+
+
+    .continer-resilt {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .container {
+        max-width: 350px;
+    }
+
+
+    .continer-resilt {
+        margin-right: 15px;
+    }
 }
