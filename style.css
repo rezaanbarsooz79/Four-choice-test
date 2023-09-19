@@ -159,10 +159,10 @@ input[type="radio"] {
         max-width: 400px;
     }
 
-
-
     .continer-resilt {
         margin-right: 20px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
@@ -170,7 +170,6 @@ input[type="radio"] {
     .container {
         max-width: 350px;
     }
-
 
     .continer-resilt {
         margin-right: 15px;
