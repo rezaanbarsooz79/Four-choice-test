@@ -30,14 +30,20 @@ body {
 .title {
     text-align: center;
     font-family: Yekan Bakh Fat;
-    font-size: 3rem;
+    font-size: 2.6rem;
+    padding-top: 40px;
+}
+
+form {
+    margin-right: 20px;
+    margin-left: 10px;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     direction: rtl;
@@ -62,6 +68,7 @@ button {
     cursor: pointer;
     font-family: Yekan Bakh Fat;
     width: 80%;
+    margin-bottom: 30px;
 }
 
 button:hover {
@@ -88,25 +95,37 @@ input[type="radio"] {
     text-align: center;
     background-color: #673ab7;
     color: #fff;
-    padding: 5px;
+    width: 100%;
     font-family: Yekan Bakh;
     position: sticky;
     top: 0px;
-    border-radius: 5px;
+    width: 100%;
 }
 
 #correct-answers,
 #correct-answersp {
     color: green;
     font-size: 1.3rem;
+    display: inline;
+    margin-left: 20px;
 }
 
 #wrong-answers,
 #wrong-answersp {
     color: red;
     font-size: 1.3rem;
+    display: inline;
 }
 
 #h2-result {
     font-size: 2rem;
+    display: inline;
+    margin-left: 15px;
+}
+
+.continer-resilt {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-right: 30px;
 }
