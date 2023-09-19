@@ -230,3 +230,19 @@ document.addEventListener("DOMContentLoaded", function () {
         submitButton.disabled = true;
     });
 });
+//امنیت
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault(); // جلوگیری از نمایش منوی مرورگر
+});
+
+document.addEventListener("keydown", function (e) {
+    if (e.key === "F12" || e.keyCode === 123) {
+        e.preventDefault(); // جلوگیری از اجرای کلید "F12"
+    }
+});
+
+document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey || e.shiftKey || e.altKey || (e.key && e.key.toLowerCase() === "u")) {
+        e.preventDefault(); // جلوگیری از کارکرد کلیدهای میانبر مرورگر (Ctrl+U، Shift+U، Alt+U)
+    }
+});
