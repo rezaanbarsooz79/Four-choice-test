@@ -115,6 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // انتخاب دکمه
 const submitButton = document.getElementById('submit-button');
 
+
+
 // تابعی برای غیرفعال کردن دکمه و تغییر رنگ به خاکستری
 function disableButton() {
     submitButton.disabled = true;
