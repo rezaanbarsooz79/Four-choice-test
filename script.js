@@ -125,8 +125,8 @@ function disableButton() {
 
 // تایمر
 let hours = 0; // تعداد ساعت‌ها
-let minutes = 0; // تعداد دقیقه‌ها
-let seconds = 30; // تعداد ثانیه‌ها
+let minutes = 21; // تعداد دقیقه‌ها
+let seconds = 0; // تعداد ثانیه‌ها
 let timeOut = (seconds * 1000) + (minutes * 60 * 1000) + (hours * 60 * 60 * 1000)
 setTimeout(disableButton, timeOut); // 60000 میلی‌ثانیه معادل یک دقیقه است
 
