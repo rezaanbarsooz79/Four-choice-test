@@ -164,7 +164,7 @@ input[type="radio"] {
     color: red;
     font-size: 1.3rem;
     display: inline;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 #unanswered-answersp,
@@ -172,6 +172,20 @@ input[type="radio"] {
     font-size: 1.3rem;
     display: inline;
     font-family: Yekan Bakh;
+}
+
+.container-score {
+    margin-bottom: 20px;
+}
+
+#percentageScore-answersp {
+    font-size: 1.4rem;
+    margin-right: 30px;
+    padding-bottom: 30px;
+}
+
+#percentageScore-answers {
+    direction: ltr;
 }
 
 #h2-result {

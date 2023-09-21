@@ -7,6 +7,7 @@
         <title>آزمون تستی</title>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="Frame.png" type="image/x-icon">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -223,7 +224,8 @@
                                 <div class="continer-item"><label><input type="radio" name="q12" value="wrong">طراحی
                                                 زندگی و تحصیلی</label><br>
                                 </div>
-                                <div class="continer-item"><label><input type="radio" name="q12" value="correct">راهنمایی و طراحی
+                                <div class="continer-item"><label><input type="radio" name="q12"
+                                                        value="correct">راهنمایی و طراحی
                                                 زندگی</label><br>
                                 </div>
                         </div>
@@ -650,6 +652,12 @@
                                 <p id="correct-answersp">جواب‌های درست: <span id="correct-answers">0</span></p>
                                 <p id="wrong-answersp">جواب‌های غلط: <span id="wrong-answers">0</span></p>
                                 <p id="unanswered-answersp">بی پاسخ: <span id="unanswered-answers">0</span></p>
+                        </div>
+                        <div class="container-score">
+                                <p id="percentageScore-answersp">درصد: <span id="percentageScore-answers">0</span></p>
+                        </div>
+                        <div>
+                                <canvas id="myChart" width="400" height="400"></canvas>
                         </div>
                 </div>
         </div>

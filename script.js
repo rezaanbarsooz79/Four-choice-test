@@ -42,17 +42,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+var formattedPercentage = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
     const submitButton = document.getElementById("submit-button");
     const resultDiv = document.getElementById("result");
     const correctAnswersSpan = document.getElementById("correct-answers");
     const wrongAnswersSpan = document.getElementById("wrong-answers");
     const unansweredSpan = document.getElementById("unanswered-answers");
+    const percentageScoredSpan = document.getElementById("percentageScore-answers");
     const quizForm = document.getElementById("quiz-form");
 
     submitButton.addEventListener("click", function () {
         // تعداد سوالات
         const totalQuestions = document.querySelectorAll(".question").length;
+        let anwersCount = 35;
         let correctCount = 0;
         let wrongCount = 0;
         let unanswered = 0;
@@ -77,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         }
-
         // تغییر رنگ گزینه‌ها
         allOptions.forEach(function (option) {
             if (option.value === "correct") {
@@ -87,14 +90,67 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+        // محاسبه درصد نهایی
+        let correct = correctCount
+        let wrong = wrongCount
+        unanswered = 35 - (correct + wrong);
+        let finalScore = correct - Math.floor(wrong / 3); // هر سه جواب غلط یک امتیاز منفی دارد
+        let percentageScore = (finalScore / (anwersCount)) * 100;
+        formattedPercentage = percentageScore.toFixed(2);
         // نمایش نتایج
-        unanswered = 35 - correctCount - correctCount;
         correctAnswersSpan.textContent = correctCount;
-        wrongAnswersSpan.textContent = correctCount;
+        wrongAnswersSpan.textContent = wrongCount;
         unansweredSpan.textContent = unanswered;
+        percentageScoredSpan.textContent = formattedPercentage;
         resultDiv.style.display = "block";
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const drawChartButton = document.getElementById("submit-button");
+    const myChart = document.getElementById("myChart");
+    let chart = null;
+    // formattedPercentage = 30
+
+    drawChartButton.addEventListener("click", function () {
+        // مقدار متغیر formattedPercentage
+
+        if (chart) {
+            chart.destroy(); // حذف نمودار قبلی (اگر وجود داشته باشد)
+        }
+
+        myChart.style.display = "block"; // نمایش نمودار
+
+        const color = formattedPercentage < 0 ? "red" : "#673ab7"; // رنگ میله‌ها
+        const data = [formattedPercentage];
+
+        chart = new Chart(myChart, {
+            type: "bar", // نوع نمودار (میله‌ای)
+            data: {
+                labels: ["درصد"],
+                datasets: [
+                    {
+                        label: "مقدار درصد",
+                        data: data,
+                        backgroundColor: color,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        suggestedMin: -100, // حد پایین برای مقدار منفی
+                        suggestedMax: 100, // حد بالا برای مقدار مثبت
+                    },
+                },
+            },
+        });
+    });
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const questionContainers = document.querySelectorAll(".question");
