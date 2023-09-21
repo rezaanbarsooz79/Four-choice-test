@@ -57,8 +57,6 @@ form {
     font-size: 1.5rem;
 }
 
-
-
 button {
     padding: 12px 20px;
     font-size: 1.3rem;
@@ -166,6 +164,14 @@ input[type="radio"] {
     color: red;
     font-size: 1.3rem;
     display: inline;
+    margin-left: 30px;
+}
+
+#unanswered-answersp,
+#unanswered-answers {
+    font-size: 1.3rem;
+    display: inline;
+    font-family: Yekan Bakh;
 }
 
 #h2-result {
@@ -216,6 +222,10 @@ input[type="radio"] {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    button {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width:400px) {
@@ -225,5 +235,9 @@ input[type="radio"] {
 
     .continer-resilt {
         margin-right: 15px;
+    }
+
+    button {
+        font-size: .8rem;
     }
 }

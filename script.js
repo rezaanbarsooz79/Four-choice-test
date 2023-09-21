@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultDiv = document.getElementById("result");
     const correctAnswersSpan = document.getElementById("correct-answers");
     const wrongAnswersSpan = document.getElementById("wrong-answers");
+    const unansweredSpan = document.getElementById("unanswered-answers");
     const quizForm = document.getElementById("quiz-form");
 
     submitButton.addEventListener("click", function () {
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const totalQuestions = document.querySelectorAll(".question").length;
         let correctCount = 0;
         let wrongCount = 0;
+        let unanswered = 0;
 
         // غیرفعال کردن تمام گزینه‌ها
         const allOptions = document.querySelectorAll("input[type='radio']");
@@ -86,8 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // نمایش نتایج
+        unanswered = 35 - correctCount - correctCount;
         correctAnswersSpan.textContent = correctCount;
-        wrongAnswersSpan.textContent = wrongCount;
+        wrongAnswersSpan.textContent = correctCount;
+        unansweredSpan.textContent = unanswered;
         resultDiv.style.display = "block";
     });
 });
@@ -247,4 +251,13 @@ document.addEventListener("keydown", function (e) {
     if (e.ctrlKey || e.shiftKey || e.altKey || (e.key && e.key.toLowerCase() === "u")) {
         e.preventDefault(); // جلوگیری از کارکرد کلیدهای میانبر مرورگر (Ctrl+U، Shift+U، Alt+U)
     }
+});
+
+document.getElementById('submit-button').addEventListener('click', function () {
+    // غیرفعال کردن هاور دکمه
+    var button = document.getElementById('submit-button');
+    button.style.pointerEvents = 'none';
+    setTimeout(function () {
+        button.style.pointerEvents = 'auto';
+    }, 2000000);
 });
