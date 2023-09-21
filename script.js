@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         chart = new Chart(myChart, {
             type: "bar", // نوع نمودار (میله‌ای)
             data: {
-                labels: ["درصد"],
+                labels: [""],
                 datasets: [
                     {
                         label: "مقدار درصد",
