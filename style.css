@@ -190,9 +190,11 @@ input[type="radio"] {
     display: inline;
     margin-left: 15px;
 }
-.container-score{
+
+.container-score {
     text-align: center;
 }
+
 .continer-resilt {
     display: flex;
     align-items: baseline;
@@ -225,10 +227,11 @@ input[type="radio"] {
     #correct-answersp {
         font-size: 1rem;
     }
-        #percentageScore-answersp {
-            font-size: 1rem;
-            margin-right: 30px;
-        }
+    #percentageScore-answersp {
+        font-size: 1rem;
+        margin-right: 30px;
+    }
+
     .continer-resilt {
         margin-right: 20px;
     }
