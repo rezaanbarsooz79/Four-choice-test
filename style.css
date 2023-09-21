@@ -174,14 +174,10 @@ input[type="radio"] {
     font-family: Yekan Bakh;
 }
 
-.container-score {
-    margin-bottom: 20px;
-}
 
 #percentageScore-answersp {
     font-size: 1.4rem;
     margin-right: 30px;
-    padding-bottom: 30px;
 }
 
 #percentageScore-answers {
@@ -193,12 +189,20 @@ input[type="radio"] {
     display: inline;
     margin-left: 15px;
 }
-
+.container-score{
+    text-align: center;
+}
 .continer-resilt {
     display: flex;
     align-items: baseline;
-    justify-content: flex-start;
-    margin-right: 30px;
+    justify-content: space-around;
+}
+
+.container-Percent {
+    width: 80%;
+    height: 20%;
+    margin: 0 auto;
+    font-family: Yekan Bakh;
 }
 
 @media only screen and (max-width:700px) {

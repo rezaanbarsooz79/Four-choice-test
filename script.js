@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     {
                         label: "مقدار درصد",
                         data: data,
-                        backgroundColor: color,
+                        backgroundColor: "#673ab7",
                     },
                 ],
             },
