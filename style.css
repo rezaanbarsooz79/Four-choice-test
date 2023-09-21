@@ -149,6 +149,7 @@ input[type="radio"] {
     position: sticky;
     top: 0px;
     width: 100%;
+    z-index: 12;
 }
 
 #correct-answers,
