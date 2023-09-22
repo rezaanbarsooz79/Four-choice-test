@@ -26,11 +26,13 @@ body {
     margin: 0;
     padding: 0;
 }
-h6{
+
+h6 {
     font-family: Yekan Bakh;
     font-size: 1.2rem;
     text-align: center;
 }
+
 .title {
     text-align: center;
     font-family: Yekan Bakh Fat;
@@ -214,6 +216,35 @@ input[type="radio"] {
     font-family: Yekan Bakh;
 }
 
+.input {
+    height: 37px;
+    width: 37%;
+    border-radius: 8px;
+    border: 2px solid hsl(236, 92%, 66%);
+    outline: none;
+    transition: 200ms ease-in;
+    padding-left: 1rem;
+    direction: rtl;
+    font-family: Yekan Bakh;
+    margin-bottom: 30px;
+}
+
+.input:focus {
+    border-bottom: 4px solid hsl(236, 92%, 66%);
+    padding-top: 2px;
+}
+
+.input::placeholder {
+    color: hsl(236, 92%, 66%);
+    opacity: 0.5;
+}
+
+.continer-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
 
 @media only screen and (max-width:700px) {
     .container {
@@ -234,6 +265,7 @@ input[type="radio"] {
     #correct-answersp {
         font-size: 1rem;
     }
+
     #percentageScore-answersp {
         font-size: 1rem;
         margin-right: 30px;
