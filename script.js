@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // تغییر رنگ گزینه‌ها
         allOptions.forEach(function (option) {
             if (option.value === "correct") {
-                option.parentElement.style.color = " #007510";
+                option.parentElement.style.color = "green";
             } else {
                 option.parentElement.style.color = "red";
             }
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         myChart.style.display = "block"; // نمایش نمودار
 
-        const color = formattedPercentage < 0 ? "red" : "#673ab7"; // رنگ میله‌ها
+        const color = formattedPercentage < 0 ? "red" : "hsl(236, 92%, 66%)"; // رنگ میله‌ها
         const data = [formattedPercentage];
 
         chart = new Chart(myChart, {
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     {
                         label: "مقدار درصد",
                         data: data,
-                        backgroundColor: "#673ab7",
+                        backgroundColor: "hsl(236, 92%, 66%)",
                     },
                 ],
             },
